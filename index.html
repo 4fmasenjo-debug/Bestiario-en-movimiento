@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multi-Animal Tracker - Centrado</title>
+    <style>
+        body { 
+            margin: 0; 
+            background: #1a1a1a; 
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: sans-serif;
+        }
+        .video-container {
+            position: relative;
+            width: 90%;
+            max-width: 800px;
+            border: 4px solid #444;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #000;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+        }
+        canvas { 
+            display: block;
+            width: 100%; 
+            height: auto; 
+        }
+        video { 
+            display: none; 
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video id="video" playsinline muted></video>
+        <canvas id="canvas"></canvas>
+        <!-- Música-->
+        <audio id="backgroundMusic" loop preload="auto">
+            <source src="Upbeat Pop Background Music - Party Time_ [5Xh9sDqeVkU].mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/pose-detection"></script>
+    <script src="main_video.js"></script>
+</body>
+</html>
